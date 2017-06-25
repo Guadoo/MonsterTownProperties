@@ -8,5 +8,49 @@
 
 import Foundation
 
-print("Hello, World!")
+var myTown = Town()
+//var myTownSize = myTown.townSize
+print(myTown.townSize, myTown)
+
+myTown.changePopulation(by: 1_000_000)
+var myTownSize = myTown.townSize
+print("Size: \(myTown.townSize); population: \(myTown.population)")
+
+let fredTheZombie = Zombie()
+fredTheZombie.town = myTown
+fredTheZombie.terrorizeTown()
+fredTheZombie.town?.printDescription()
+//fredTheZombie.isFallingApart = true
+
+print("Victim pool: \(fredTheZombie.victimPool)")
+fredTheZombie.victimPool = 500
+print("Victim pool: \(fredTheZombie.victimPool)")
+print(Zombie.spookyNoise)
+if Zombie.isTerrifying {
+    print("Run away!")
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
